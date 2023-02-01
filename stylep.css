@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ---- NAVBAR ---- */
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(162, 162, 162);       
+}
+
+.navbar{
+    width: 80%;      /* usara el 80% del menu */
+    margin: auto;      /* centrado */
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 160px;
+    height: 90px;    
+    border-radius: 20px;  
+    cursor: pointer;    
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block; /* para que esten al costado home - about - services - etc */
+    margin: 0 20px;
+    position: relative;
+} 
+.navbar ul li a{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: black;
+}
+
+/* EFECTO DEL HOVER - LINKS */
+
+.navbar ul li::before {
+    content: "";
+    height: 3px;
+    width: 0%; /* 0 para k no se muestre */
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    left: 0;
+    bottom: -6px; /* la distancia de la barra */
+    transition: 0.3s ease-out; /* efecto de aparicion */
+}
+
+.navbar ul li:hover::before{
+    width: 100%; /* para k se muestre y haga el efecto */
+
+}
+/*------- NAVBAR RESPOSIVE -----*/
+
+
+@media (max-width: 944px){
+    .logo{
+        left: 6%;
+        top: 20px;
+        width: 140px;
+        height: 80px;
+    }
+}
+
+
+/* -------- HOME ---------- */
+
+.home{        
+    width: 75vw;
+    margin: auto;      
+    max-width: 1000px;
+    min-width: 320px; 
+    display: flex; 
+}
+.home .descripcion h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3.5rem;
+    display: block;
+}
+
+.home img{
+    width: 100%;
+    border-radius: 58%;  
+    border-style: solid;
+    
+}
